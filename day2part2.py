@@ -15,20 +15,15 @@ with open('input.txt', 'r') as f:
 total = 0
 for r in reports:
     data = np.array(re.findall(r'\d+', r), dtype=int)
-  
     df = np.diff(data)
+
     if test_differences(df):
         total += 1
         continue
 
     for n in range(len(data)):
-        if n == 0:
-            df = np.diff(data[1:])
-        elif n == len(data) - 1:
-            df = np.diff(data[:-1])
-        else:
-            temp_data = np.concatenate((data[:n], data[n+1:]))
-            df = np.diff(temp_data)
+        temp_data = np.concatenate((data[:n], data[n+1:]))
+        df = np.diff(temp_data)
         if test_differences(df):
             total += 1
             break
