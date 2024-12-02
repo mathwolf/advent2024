@@ -15,8 +15,8 @@ with open('input.txt', 'r') as f:
 total = 0
 for r in reports:
     data = np.array(re.findall(r'\d+', r), dtype=int)
+    
     df = np.diff(data)
-
     if test_differences(df):
         total += 1
         continue
