@@ -21,6 +21,7 @@ for k in antennas.keys():
         # find difference in position between antennas
         delta_row = a2[0] - a1[0]
         delta_col = a2[1] - a1[1]
+        
         # see if there is a point with integer coordinates
         # lying between these antennas
         divisor = gcd(delta_row, delta_col)
