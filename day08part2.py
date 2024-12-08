@@ -15,8 +15,6 @@ for i, L in enumerate(lines):
             else:
                 antennas[c] = {(i,j)}
 
-# problem is to find all integer values on line
-# connecting two antennas
 antinodes = set()
 for k in antennas.keys():
     for a1, a2 in combinations(antennas[k], 2):
