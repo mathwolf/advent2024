@@ -39,9 +39,8 @@ for i, L in enumerate(map_lines):
             robot = (i, 2 * j)
 
 
-# read in the move made by the robot
+# read in the moves made by the robot
 move_lines = moves.split('\n')
-
 for L in move_lines:
     for c in L:
         if c == '^':
