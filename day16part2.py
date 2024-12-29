@@ -37,8 +37,7 @@ for i, L in enumerate(lines):
     for j, c in enumerate(L):
         if c == 'S':
             maze[i,j] = PATH
-            # candidate_nodes[(i, j, RIGHT)] = Node(0, 1, [[(i,j, RIGHT)]])
-            candidate_nodes[(i, j, UP)] = Node(0, 1, [[(i,j, UP)]])
+            candidate_nodes[(i, j, RIGHT)] = Node(0, 1, [[(i,j, RIGHT)]])
         elif c == 'E':
             maze[i,j] = PATH
             end_location = (i,j)
